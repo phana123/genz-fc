@@ -1,0 +1,56 @@
+.gm {
+  --bg: #fdf4ff;
+  --card: #ffffff;
+  --card-2: #faf0fd;
+  --line: rgba(126, 34, 168, .14);
+  --text: #3b1a4a;
+  --muted: #7d6490;
+  --primary: #a21caf;
+  --accent: #c026d3;
+  --accent-soft: #f6d9fb;
+  color: var(--text);
+  background: var(--bg);
+  padding: 16px;
+  border-radius: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+  min-height: 100%;
+}
+
+.gm-tabs {
+  display: flex; gap: 8px; flex-wrap: wrap; align-items: center; padding: 10px 12px;
+  border-radius: 16px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, #fbe4fb, #ede4ff);
+}
+.gm-tab {
+  padding: 7px 14px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--card); color: var(--text); font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.gm-tab:hover { background: var(--accent-soft); }
+.gm-tab.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+.gm-tab-actions { margin-left: auto; }
+
+.gm-btn {
+  padding: 7px 13px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--card); color: var(--text); font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.gm-btn:hover { background: var(--accent-soft); }
+.gm-btn.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+.gm-btn.primary:hover { background: var(--accent); }
+
+.gm-content { display: flex; flex-direction: column; gap: 14px; }
+.gm-section {
+  padding: 16px; border-radius: 20px; border: 1px solid var(--line);
+  background: var(--card); box-shadow: 0 2px 10px rgba(126, 34, 168, .06);
+}
+.gm-label {
+  display: block; font-size: 11px; font-weight: 700; color: var(--primary);
+  letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px;
+}
+.gm-textarea {
+  width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 12px;
+  border: 1px solid var(--line); background: #fff; color: var(--text);
+  font-size: 13px; font-family: inherit; resize: vertical;
+}
+.gm-textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(192, 38, 211, .15); }
+.gm-textarea:disabled { background: var(--card-2); opacity: .8; }
+.gm-text { margin: 0; font-size: 13px; line-height: 1.6; color: var(--text); white-space: pre-wrap; }

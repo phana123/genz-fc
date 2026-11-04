@@ -1,0 +1,126 @@
+.md {
+  --bg: #fdf4ff;
+  --card: #ffffff;
+  --card-2: #faf0fd;
+  --line: rgba(126, 34, 168, .14);
+  --text: #3b1a4a;
+  --muted: #7d6490;
+  --accent: #c026d3;
+  --accent-dark: #a21caf;
+  --accent-soft: #f6d9fb;
+  color: var(--text);
+  background: var(--bg);
+  padding: 16px;
+  border-radius: 24px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.md h3 { margin: 0 0 10px; font-size: 15px; }
+.md small { font-size: 10px; letter-spacing: .08em; font-weight: 700; color: var(--accent-dark); text-transform: uppercase; }
+.md-muted { font-size: 12px; color: var(--muted); margin: 4px 0 8px; }
+
+/* Inputs and buttons */
+.md input, .md select, .md textarea {
+  box-sizing: border-box; padding: 8px 12px; border-radius: 12px;
+  border: 1px solid var(--line); background: #fff; color: var(--text); font-size: 13px; min-width: 0;
+}
+.md textarea { width: 100%; resize: vertical; }
+.md input:focus, .md select:focus, .md textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(192, 38, 211, .15); }
+.md input:disabled, .md select:disabled, .md textarea:disabled { background: var(--card-2); opacity: .8; }
+.md input[type="color"] { padding: 2px; height: 34px; width: 100%; cursor: pointer; }
+
+.md-btn {
+  padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--card); color: var(--text); font-size: 12px; font-weight: 700; cursor: pointer;
+}
+.md-btn:hover { background: var(--accent-soft); }
+.md-btn.primary { background: var(--accent-dark); border-color: var(--accent-dark); color: #fff; }
+.md-btn.primary:hover { background: var(--accent); }
+
+/* Match header */
+.md-header {
+  display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;
+  padding: 22px; border-radius: 22px; border: 1px solid var(--line);
+  background: linear-gradient(135deg, #fbe4fb, #ede4ff);
+}
+.md-team { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.md-logo {
+  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--accent-dark); color: #fff; font-size: 22px; font-weight: 800;
+  border: 3px solid #fff; box-shadow: 0 2px 10px rgba(126, 34, 168, .25);
+}
+.md-logo.opp { background: #f43f5e; }
+.md-team-name { font-weight: 800; font-size: 16px; }
+.md-vs { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.md-vs-text { font-size: 22px; font-weight: 800; color: var(--accent-dark); text-transform: uppercase; }
+.md-status-badge { font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 999px; background: #fff; color: var(--accent-dark); border: 1px solid var(--line); }
+
+/* Info row */
+.md-info-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.md-info-item {
+  display: flex; flex-direction: column; gap: 4px; padding: 12px 14px;
+  border-radius: 16px; background: var(--card); border: 1px solid var(--line);
+}
+.md-info-item b { font-size: 14px; }
+
+.md-edit-row {
+  display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; border-radius: 16px;
+  background: var(--card-2); border: 1px solid var(--line);
+}
+
+/* Layout */
+.md-body { display: grid; grid-template-columns: 280px minmax(0, 1fr) 300px; gap: 16px; align-items: start; }
+.md-col { display: flex; flex-direction: column; gap: 14px; }
+.md-card, .md-pitch-section {
+  padding: 14px; border-radius: 20px; border: 1px solid var(--line);
+  background: var(--card); box-shadow: 0 2px 10px rgba(126, 34, 168, .06);
+}
+
+/* Substitutes */
+.md-sub-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.md-sub-row {
+  display: flex; align-items: center; gap: 8px; padding: 8px 10px; font-size: 13px;
+  border-radius: 12px; background: var(--card-2); border: 1px solid var(--line);
+}
+.md-sub-num { font-weight: 800; color: var(--accent-dark); }
+.md-sub-name { flex: 1; font-weight: 600; }
+.md-sub-pos { font-size: 11px; color: var(--muted); }
+.md-fitness { font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #dcfce7; color: #166534; }
+.md-fitness.fatigued { background: #fef3c7; color: #92400e; }
+.md-fitness.doubtful { background: #fee2e2; color: #b91c1c; }
+.md-sub-del { border: none; background: transparent; color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer; padding: 0 4px; }
+.md-sub-del:hover { color: #b91c1c; }
+.md-add-sub { display: flex; flex-direction: column; gap: 8px; }
+.md-add-sub-actions { display: flex; gap: 8px; justify-content: flex-end; }
+
+/* Staff */
+.md-staff-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+.md-staff-edit { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+
+/* Pitch */
+.md-pitch-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.md-pitch-header h3 { margin: 0; }
+.md-pitch-wrap { max-width: 520px; margin: 0 auto; }
+.md-pitch { width: 100%; height: auto; display: block; border-radius: 14px; }
+.md-xi-editor { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin-top: 14px; }
+.md-xi-row { display: flex; align-items: center; gap: 6px; }
+.md-xi-row input:first-of-type { width: 52px; flex: none; text-align: center; }
+.md-xi-row input:last-of-type { flex: 1; }
+.md-xi-slot {
+  width: 22px; height: 22px; border-radius: 50%; flex: none; display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent-dark); font-size: 11px; font-weight: 700;
+}
+
+/* Briefing */
+.md-brief-row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.md-brief-row input { width: 100%; }
+
+/* Kit */
+.md-kit-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.md-kit-item { display: flex; flex-direction: column; gap: 8px; }
+.md-kit-swatch { height: 56px; border-radius: 14px; border: 1px solid var(--line); }
+
+.md-actions { display: flex; flex-direction: column; gap: 8px; }
+
+@media (max-width: 1100px) {
+  .md-body { grid-template-columns: 1fr; }
+}
